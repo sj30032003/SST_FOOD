@@ -31,7 +31,7 @@ const OptionForm = () => {
   useEffect(() => {
     const fetchCategory = async () => {
 
-      await fetch("http://localhost:5000/api/Categorys", {
+      await fetch("https://sst-food-backend-ykr3.onrender.com/api/Categorys", {
 
           method: 'GET',
           headers: {
@@ -56,8 +56,8 @@ const OptionForm = () => {
 
 
       e.preventDefault();
-      const response = await fetch("http://localhost:5000/api/createItem", {
-        
+      const response = await fetch("https://sst-food-backend-ykr3.onrender.com/api/createItem", {
+
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

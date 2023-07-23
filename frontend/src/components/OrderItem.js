@@ -18,7 +18,7 @@ export default function OrderItem() {
 
     const fetchMyOrder = async () => {
 
-        await fetch("http://localhost:5000/api/myOrderData", {
+        await fetch("https://sst-food-backend-ykr3.onrender.com/api/myOrderData", {
             // credentials: 'include',
             // Origin:"http://localhost:3000/login",
             method: 'POST',
@@ -61,7 +61,7 @@ export default function OrderItem() {
                         return (
 
                             <>
-                          
+
                                 <div className='m-auto mt-5'>
 
                                     {date=data.Date}

@@ -24,7 +24,7 @@ export default function Cart() {
     const handleCheckOut = async () => {
       let userEmail = localStorage.getItem("userEmail");
 
-      let response = await fetch("http://localhost:5000/api/OrderData", {
+      let response = await fetch("https://sst-food-backend-ykr3.onrender.com/api/OrderData", {
         // credentials: 'include',
         // Origin:"http://localhost:3000/login",
         method: 'POST',
@@ -51,7 +51,7 @@ export default function Cart() {
     return (
       <div>
        <Toaster/>
-        
+
         <div className='container m-auto mt-5 table-responsive text-white  table-responsive-sm table-responsive-md' >
           <table className='table table-hover text-white'>
             <thead className='  fs-4 text-white'>

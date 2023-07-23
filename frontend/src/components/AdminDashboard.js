@@ -14,7 +14,7 @@ export default function AdminDashboard() {
   const date="";
   const fetchOrder=async(order_id)=>{
 
-    await fetch("http://localhost:5000/api/order_id", {
+    await fetch("https://sst-food-backend-ykr3.onrender.com/api/order_id", {
             // credentials: 'include',
             // Origin:"http://localhost:3000/login",
             method: 'POST',
@@ -37,7 +37,7 @@ export default function AdminDashboard() {
   }
   const getOrders = async () => {
     try {
-      const { data } =  await fetch("http://localhost:5000/api/order-data", {
+      const { data } =  await fetch("https://sst-food-backend-ykr3.onrender.com/api/order-data", {
         // credentials: 'include',
         // Origin:"http://localhost:3000/login",
         method: 'GET',

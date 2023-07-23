@@ -12,7 +12,7 @@ export default function Users() {
   const [roles,setRole]= useState([0,1]);
   const getUsers = async () => {
     try {
-      const { data } = await fetch("http://localhost:5000/api/users", {
+      const { data } = await fetch("https://sst-food-backend-ykr3.onrender.com/api/users", {
         // credentials: 'include',
         // Origin:"http://localhost:3000/login",
         method: 'GET',
@@ -37,7 +37,7 @@ export default function Users() {
   }, [auth?.token]);
   const handleChangeRole = async(userId,value)=>{
     try {
-      const response = await fetch(`http://localhost:5000/api/user-role/${userId}`, {
+      const response = await fetch(`https://sst-food-backend-ykr3.onrender.com/api/user-role/${userId}`, {
         // credentials: 'include',
         // Origin:"http://localhost:3000/login",
         method: 'PUT',
@@ -63,7 +63,7 @@ export default function Users() {
   }
   const handleChangeStatus = async (userId, value) => {
     try {
-    const response = await fetch(`http://localhost:5000/api/user-status/${userId}`, {
+    const response = await fetch(`https://sst-food-backend-ykr3.onrender.com/api/user-status/${userId}`, {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'PUT',

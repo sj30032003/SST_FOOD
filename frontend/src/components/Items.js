@@ -10,7 +10,7 @@ export default function Items() {
     const [foodItems,setFoodItem]=useState([]);
 
     const loadData= async()=>{
-    const response= await fetch("http://localhost:5000/api/foodData",{
+    const response= await fetch("https://sst-food-backend-ykr3.onrender.com/api/foodData",{
             // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',
@@ -29,7 +29,7 @@ export default function Items() {
         loadData();
     },[])
     if (foodItems?.length===0) return <Loader />;
-   
+
   return (
     <div>
 

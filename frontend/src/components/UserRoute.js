@@ -14,7 +14,7 @@ export default function UserRoute() {
     async function authCheck(token) {
 
         try {
-          const response = await fetch("http://localhost:5000/api/user-auth", {
+          const response = await fetch("https://sst-food-backend-ykr3.onrender.com/api/user-auth", {
                // credentials: 'include',
       // Origin:"http://localhost:3000/login",
             method: 'GET',
@@ -33,6 +33,6 @@ export default function UserRoute() {
 
     if (auth?.token) authCheck(auth.token);
   }, [auth?.token]);
- 
+
   return ok ? <Outlet /> : <Spinner path="" />;
 }
